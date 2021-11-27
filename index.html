@@ -1,0 +1,51 @@
+<html lang="hu">
+  <head>
+    <script src="bundle.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h2>Koronavírus adatok</h2>
+    </div>
+    <div class="search-bar">
+      <form action="" id="form">
+        <div class="form-item" id="orszag">
+          <input type="text" placeholder="Ország" id="country" required/>
+        </div>
+        <div class="form-item selectors" >
+          <label for="population">
+            <input type="checkbox" id="population" />
+            Lakosság
+          </label>
+            <label for="confirmed">
+              <input type="checkbox" id="confirmed" />
+              Összes fertözött
+            </label>
+            <label for="deaths">
+              <input type="checkbox" id="deaths" />
+              Elhunytak
+            </label>
+          </div>
+          <div class="form-item selectors" >
+            <label for="administered">
+              <input type="checkbox" id="administered" />
+              Beadott vakcinák
+            </label>
+            <label for="people_vaccinated">
+              <input type="checkbox" id="people_vaccinated" />
+              Teljesen oltottak
+            </label>
+            <label for="people_partially_vaccinated">
+              <input type="checkbox" id="people_partially_vaccinated" />
+              Részben oltottak
+            </label>
+          </div>
+          <div class="horizontal-spacer"></div>
+        <div class="form-item">
+          <button type="reset">Törlés</button>
+          <button type="submit">Keresés</button>
+        </div>
+      </form>
+    </div>
+    <div class="content"></div>
+  </body>
+</html>

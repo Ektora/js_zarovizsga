@@ -1,0 +1,74 @@
+:root{
+    --font-color: #fff;
+    --primary-color: #d24d57;
+    --secondary-color: #E85D4A;
+
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--font-color);
+    
+}
+
+.header{
+    background-color: var(--primary-color);
+    padding: 2px 24px;
+    
+}
+
+.search-bar>form{
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+}
+
+.form-item{
+    padding: 8px 0 8px 8px;
+    margin-right: 16px;
+    width: 200px;
+}
+.form-item>input{
+    line-height: 32px;
+    height: 32px;
+    border: 1px solid #E85D4A;
+    border-radius: 4px;
+    width: 100%;
+    padding: 0 8px;
+    background-color: rgba(255, 255,255, 0.8);
+}
+
+#orszag{
+    flex: 2 1 200px;
+}
+
+.selectors{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+.horizontal-spacer{
+    flex: 1 1 auto;
+}
+
+button{
+    font-weight: bold;
+    background: none;
+    background-color: white;
+    color: var(--primary-color);
+    border-radius: 8px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+button:hover{
+    background-color: var(--primary-color);
+    color: white; 
+}
+button:active {
+	position:relative;
+	top:2px;
+}

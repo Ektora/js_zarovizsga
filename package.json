@@ -1,0 +1,21 @@
+{
+  "name": "js_covid-19",
+  "version": "1.0.0",
+  "description": "Covid-19 adatok országos bontásban",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zsolt Lucski",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^10.0.0",
+    "css-loader": "^6.5.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
+  }
+}
