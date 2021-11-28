@@ -2,6 +2,8 @@ export const loadData = async (country) => {
     try{
     const esetek = await getCases(country);
     const oltottak = await getVaccines(country);
+    const eredmeny = [esetek.All.population, esetek.All.confirmed, esetek.All.deaths, oltottak.All.administered,oltottak.All.people_vaccinated, oltottak.All.people_partially_vaccinated];
+    return eredmeny;
     }catch(e){
         //console.error('Hiba történt! ',e);
         throw e;

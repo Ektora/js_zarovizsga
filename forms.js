@@ -1,3 +1,4 @@
+import { addCard } from "./cards";
 import { loadData } from "./covid19";
 
 export const initForm = () => {
@@ -11,6 +12,7 @@ export const initForm = () => {
         const loadingIndicator = document.getElementById('loading-indicator');
         const submitButton = document.getElementById('submit');
         const errorMessage = document.getElementById('error-message');
+        const infoMessage = document.getElementById('info-message');
         const selectors = [];
         selectors[0] = document.getElementById('population');
         selectors[1] = document.getElementById('confirmed');
@@ -22,16 +24,24 @@ export const initForm = () => {
         submitButton.disabled = true;
         console.log(orszagNev, cbSelected);
         try{
-        await loadData(orszagNev);
+        if(cbSelected){
+        const eredmeny = await loadData(orszagNev);
+        addCard(orszagNev, eredmeny, selectors);
         form.reset();
-        
+        }
+        else{
+            infoMessage.style.display = 'block';
+            setTimeout(()=>{
+                infoMessage.style.display = 'none';
+            }, 3000);
+        }
         }
         catch{
             console.log('Itten vagyok!')
             errorMessage.style.display = 'block';
             setTimeout(()=>{
                 errorMessage.style.display = 'none';
-            }, 3000)
+            }, 3000);
         }
         submitButton.disabled = false;
     });
