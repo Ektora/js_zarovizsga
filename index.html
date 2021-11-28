@@ -42,10 +42,12 @@
           <div class="horizontal-spacer"></div>
         <div class="form-item">
           <button type="reset">Törlés</button>
-          <button type="submit">Keresés</button>
+          <button type="submit" id="submit">Keresés</button>
         </div>
       </form>
     </div>
+    <div class="loader" id="loading-indicator" style="display: none;"></div>
+    <div id="error-message" class="error-message" style="display: none;">Hiba történt az adatok lekérdezése közben!</div>
     <div class="content"></div>
   </body>
 </html>

@@ -7,18 +7,18 @@
       <h2>Koronavírus adatok</h2>
     </div>
     <div class="search-bar">
-      <form action="">
+      <form action="" id="form">
         <div class="form-item" id="orszag">
-          <input type="text" placeholder="Ország" required/>
+          <input type="text" placeholder="Ország" id="country" required/>
         </div>
         <div class="form-item selectors" >
+          <label for="population">
+            <input type="checkbox" id="population" />
+            Lakosság
+          </label>
             <label for="confirmed">
               <input type="checkbox" id="confirmed" />
               Összes fertözött
-            </label>
-            <label for="recovered">
-              <input type="checkbox" id="recovered" />
-              Gyógyultak
             </label>
             <label for="deaths">
               <input type="checkbox" id="deaths" />
@@ -41,10 +41,13 @@
           </div>
           <div class="horizontal-spacer"></div>
         <div class="form-item">
+          <button type="reset">Törlés</button>
           <button type="submit">Keresés</button>
         </div>
       </form>
     </div>
+    <div class="loader" id="loading-indicator" style="display: none;"></div>
+    <div id="error-message" class="error-message" style="display: none;">Hiba történt az adatok lekérdezése közben!</div>
     <div class="content"></div>
   </body>
 </html>

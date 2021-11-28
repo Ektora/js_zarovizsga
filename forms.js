@@ -4,10 +4,13 @@ export const initForm = () => {
     
     const form = document.getElementById('form');
 
-    form.addEventListener('submit',e=>{
+    form.addEventListener('submit',async e=>{
         e.preventDefault();
         const country = document.getElementById('country').value;
         const orszagNev = countryNameValidator(country);
+        const loadingIndicator = document.getElementById('loading-indicator');
+        const submitButton = document.getElementById('submit');
+        const errorMessage = document.getElementById('error-message');
         const selectors = [];
         selectors[0] = document.getElementById('population');
         selectors[1] = document.getElementById('confirmed');
@@ -16,8 +19,21 @@ export const initForm = () => {
         selectors[4] = document.getElementById('people_vaccinated');
         selectors[5] = document.getElementById('people_partially_vaccinated');
         const cbSelected = checkBoxValidator(selectors);
+        submitButton.disabled = true;
         console.log(orszagNev, cbSelected);
-        loadData(orszagNev);
+        try{
+        await loadData(orszagNev);
+        form.reset();
+        
+        }
+        catch{
+            console.log('Itten vagyok!')
+            errorMessage.style.display = 'block';
+            setTimeout(()=>{
+                errorMessage.style.display = 'none';
+            }, 3000)
+        }
+        submitButton.disabled = false;
     });
 }
 
