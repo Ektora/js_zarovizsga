@@ -7,7 +7,9 @@ export const  addCard =(country, eredmeny, selectors) =>{
     `
     <div class="cards">
         <div class="title">
+            <img src="https://flagicons.lipis.dev/flags/4x3/${zaszlo}.svg" width="30" height="20">
             <h2>${country}</h2>
+            <img src="https://flagicons.lipis.dev/flags/4x3/${zaszlo}.svg" width="30" height="20">
         </div>
         <div class="card-content">
             <div class="card-section">
