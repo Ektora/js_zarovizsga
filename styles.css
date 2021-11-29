@@ -84,6 +84,63 @@ button:active {
     padding: 10px;
 }
 
+.flag-icon{
+  width: 4px;
+  height: 3px;
+}
+.title{
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title>h2{
+  color: white;
+  margin: 0;
+
+}
+
+.cards{
+  border:1px solid var(--primary-color) ;
+  color: var(--primary-color);
+  background-color: rgba(210,77,87, 0.15);
+  width: 24%;
+  height: 300px;
+  border-radius: 4px;
+  margin: 5px 0.4%;
+  box-shadow: 1px 1px 5px 2px rgba(210,77,87,0.5);
+}
+
+.card-content{
+  display: flex;
+  
+}
+.card-section{
+  width: 50%;
+  text-align: center;
+}
+.card-section>div{
+  padding: 8px;
+  font-size: 16px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-section>div>span>h3{
+  margin: 0;
+  font-size: 16px;
+}
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+
 /* Loader */
 
 .loader {
