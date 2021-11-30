@@ -9,7 +9,7 @@ export const initForm = () => {
         e.preventDefault();
         const country = document.getElementById('country').value;
         const orszagNev = countryNameValidator(country);
-        const loadingIndicator = document.getElementById('loading-indicator');
+        const loadingIndicator = document.getElementById('loading-content');
         const submitButton = document.getElementById('submit');
         const errorMessage = document.getElementById('error-message');
         const infoMessage = document.getElementById('info-message');
@@ -21,6 +21,7 @@ export const initForm = () => {
         selectors[4] = document.getElementById('people_vaccinated');
         selectors[5] = document.getElementById('people_partially_vaccinated');
         const cbSelected = checkBoxValidator(selectors);
+        loadingIndicator.style.display='block';
         submitButton.disabled = true;
         console.log(orszagNev, cbSelected);
         try{
@@ -44,6 +45,7 @@ export const initForm = () => {
             }, 3000);
         }
         submitButton.disabled = false;
+        loadingIndicator.style.display='none';
     });
 }
 
